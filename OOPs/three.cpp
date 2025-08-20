@@ -67,3 +67,6 @@ int main() {
 
     return 0;
 }
+
+
+//new keyword is used to allocate  memory dynamically
