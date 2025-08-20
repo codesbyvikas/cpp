@@ -15,7 +15,14 @@ public:
     //     this->age=age;
     // }
 
-    Person(){}
+    //This will be called first
+    Person(){
+        cout<<"This is parent.."<<endl;
+    }
+    ~Person(){
+        cout<<"This is parent dest.."<<endl;
+    }
+
 };
 
 class Student: public Person {
@@ -26,6 +33,15 @@ public:
         cout<<"name: "<<name<<endl;
         cout<<"rollNo: "<<rollNo<<endl;
         cout<<"age: "<<age<<endl;
+     }
+
+     Student() {
+        cout<<"This is child.."<<endl;
+     }
+
+     //This will be called first
+     ~Student() {
+        cout<<"This is child dest.."<<endl;
      }
 };
 
