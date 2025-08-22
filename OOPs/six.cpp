@@ -10,15 +10,15 @@ public:
     string name;
     int age;
 
-    // Person(string name, int age) {
-    //     this->name=name;
-    //     this->age=age;
-    // }
+    Person(string name, int age) {
+        this->name=name;
+        this->age=age;
+    }
 
     //This will be called first
-    Person(){
-        cout<<"This is parent.."<<endl;
-    }
+    // Person(){
+    //     cout<<"This is parent.."<<endl;
+    // }
     ~Person(){
         cout<<"This is parent dest.."<<endl;
     }
@@ -35,8 +35,9 @@ public:
         cout<<"age: "<<age<<endl;
      }
 
-     Student() {
+     Student(string name, int age, int rollNo) : Person(name,  age){
         cout<<"This is child.."<<endl;
+        this->rollNo=rollNo;
      }
 
      //This will be called first
@@ -46,10 +47,8 @@ public:
 };
 
 int main() {
-    Student s1;
-    s1.name="rahul";
-    s1.age=21;
-    s1.rollNo=1234;
+    Student s1("rahul", 21, 1234);
+ 
 
     s1.getInfo();
     return 0;
